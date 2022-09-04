@@ -9,6 +9,9 @@ window.onload = () => {
   function startGame() {
     while (again) {
       let player = prompt('pilih antara gunting, batu atau kertas?');
+
+      if (player == `` || !player) return again = false;
+
       let computer = setComputer(getRandomNumber(1, 3));
       let validate = setGames(player, computer);
       
