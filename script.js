@@ -47,7 +47,7 @@ window.onload = () => {
     if (player == 'batu') return (computer == 'gunting') ? 'menang' : 'kalah';
     if (player == 'kertas') return (computer == 'batu') ? 'menang' : 'kalah';
     
-    return 'error in function setGames()';
+    return `bego! udah dikasih tau pilih gunting, batu atau kertas. malah jawab ${player}`;
   }
   
   function setScorePlayer(result) {
