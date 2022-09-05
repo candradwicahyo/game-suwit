@@ -13,14 +13,16 @@ window.onload = () => {
       if (player == `` || !player) return again = false;
 
       let computer = setComputer(getRandomNumber(1, 3));
-      let validate = setGames(player.toLowerCase(), computer);
+      let validate = setGames(player.trim().toLowerCase(), computer);
       
-      showResult(player.toLowerCase(), computer, validate);
+      showResult(player.trim().toLowerCase(), computer, validate);
       setScorePlayer(validate);
       
       alert(`skor sementara :
+
         pemain : (${scorePlayer}) poin
         komputer : (${scoreComputer}) poin
+
       `);
       
       setWinner();
