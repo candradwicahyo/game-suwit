@@ -35,8 +35,8 @@ window.onload = () => {
   
   
   function setComputer(number) {
-    if (number < 0.34) return 'gunting';
-    if (number >= 0.34 && number <= 0.67) return 'batu';
+    if (number < 0.34) return 'batu';
+    if (number >= 0.34 && number <= 0.67) return 'gunting';
     return 'kertas';
   }
   
