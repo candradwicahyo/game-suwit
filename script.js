@@ -13,9 +13,9 @@ window.onload = () => {
       if (player == `` || !player) return again = false;
 
       let computer = setComputer(getRandomNumber(1, 3));
-      let validate = setGames(player, computer);
+      let validate = setGames(player.toLowerCase(), computer);
       
-      showResult(player, computer, validate);
+      showResult(player.toLowerCase(), computer, validate);
       setScorePlayer(validate);
       
       alert(`skor sementara :
