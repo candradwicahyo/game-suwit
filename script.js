@@ -12,7 +12,7 @@ window.onload = () => {
 
       if (player == `` || !player) return again = false;
 
-      let computer = setComputer(getRandomNumber(1, 3));
+      let computer = setComputer(Math.random());
       let validate = setGames(player.trim().toLowerCase(), computer);
       
       showResult(player.trim().toLowerCase(), computer, validate);
@@ -34,16 +34,10 @@ window.onload = () => {
   alert('terima kasih sudah bermain bersama kami')
   
   
-  function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-  
   function setComputer(number) {
-    if (number == 1) return 'gunting';
-    if (number == 2) return 'batu';
-    if (number == 3) return 'kertas';
-    
-    return 'error in function setComputer()';
+    if (number < 0.34) return 'gunting';
+    if (number >= 0.34 && number <= 0.67) return 'batu';
+    return 'kertas';
   }
   
   function setGames(player, computer) {
